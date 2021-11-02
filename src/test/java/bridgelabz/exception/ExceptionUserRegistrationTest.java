@@ -1,7 +1,5 @@
 package bridgelabz.exception;
 
-package com.bdlz.exceptionuser;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,15 +23,28 @@ public class ExceptionUserRegistrationTest {
 
     @Test
     public void givenLastName_IsProper_ReturnTrue() {
-        boolean actualResult = exceptionUserRegistration.firstName("Velisetti");
+        boolean actualResult = exceptionUserRegistration.lastName("Velisetti");
         Assert.assertEquals(true, actualResult);
     }
 
     @Test
     public void givenLastName_IsProper_ReturnFalse() {
-        boolean actualResult = exceptionUserRegistration.firstName("VeLiseTTi");
+        boolean actualResult = exceptionUserRegistration.lastName("VeLiseTTi");
+        Assert.assertEquals(false, actualResult);
+    }
+
+    @Test
+    public void givenEmailId_IsProper_ReturnTrue() {
+        boolean actualResult = exceptionUserRegistration.emailId("ramakrishna96.velisetti@gmail.com");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenEmailId_IsNotProper_ReturnFalse() {
+        boolean actualResult = exceptionUserRegistration.emailId("ramakrishna96.velisettigmail.com");
         Assert.assertEquals(false, actualResult);
     }
 
 }
+
  
