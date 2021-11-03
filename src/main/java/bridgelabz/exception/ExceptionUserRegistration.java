@@ -63,5 +63,3 @@ public class ExceptionUserRegistration {
         return matcher.matches();
     }
 }
-
-  
